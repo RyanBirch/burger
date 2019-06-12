@@ -3,7 +3,7 @@ const connection = require('./connection.js')
 // mysql methods
 const orm = {
 
-    selectAll: function (table) {
+    selectAll: function(table) {
 
         return new Promise((resolve, reject) => {
             let query = `SELECT * FROM ??`
@@ -29,8 +29,8 @@ const orm = {
         })
     },
 
-    updateOne: function(table, val) {
-        
+    updateOne: function(table, vals) {
+
          return new Promise((resolve, reject) => {
              let query = `UPDATE ?? SET ?`
 
