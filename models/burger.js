@@ -1,4 +1,4 @@
-const orm = requre('./../config/orm.js')
+const orm = require('./../config/orm.js')
 
 const burger = {
 

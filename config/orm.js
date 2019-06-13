@@ -32,14 +32,14 @@ const orm = {
     updateOne: function(table, vals) {
 
          return new Promise((resolve, reject) => {
-             let query = `UPDATE ?? SET ?`
+            let query = `UPDATE ?? SET ?`
 
-             connection.query(query, [table, vals], (err, results) => {
-                 if (err) throw err 
+            connection.query(query, [table, vals], (err, results) => {
+                if (err) throw err 
 
-                 resolve(results)
-             })
-         })
+                resolve(results)
+            })
+        })
     }
 }
 
