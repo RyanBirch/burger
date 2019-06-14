@@ -10,6 +10,9 @@ app.listen(PORT, () => console.log('Listening on port ' + PORT))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
+// serve static files from public folder
+app.use(express.static('public'))
+
 // Set Handlebars.
 const exphbs = require('express-handlebars')
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
