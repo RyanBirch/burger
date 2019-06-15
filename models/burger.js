@@ -18,10 +18,10 @@ const burger = {
         })
     },
 
-    updateOne: function(vals) {
+    updateOne: function(id) {
         return new Promise((resolve, reject) => {
 
-            orm.updateOne('burgers', vals)
+            orm.updateOne('burgers', id)
                 .then( data => resolve(data))
         })
     }

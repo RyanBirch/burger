@@ -1,6 +1,24 @@
 <h1>Eat-Da-Burger</h1>
 
 <form id="burger-form">
-    Enter a burger you want to eat <input type="text" id="burger-entry">
+    Enter a burger you want to eat <input type="text" id="burger-entry" required>
     <button type="submit">Submit</button>
 </form>
+
+
+<ul>
+    {{#each burger}}
+        {{#unless devoured}}
+            {{> burgers/burger-block eat=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+
+<ul>
+    {{#each burger}}
+        {{#if devoured}}
+            {{> burgers/burger-block eat=false}}
+        {{/if}}
+    {{/each}}
+</ul>
