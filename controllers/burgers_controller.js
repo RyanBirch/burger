@@ -23,17 +23,12 @@ router.post('/api/burgers', (req, res) => {
     burger.selectAll().then(data => console.table(data))
 })
 
-router.put('/api/burgers', (req, res) => {
-    let id = req.body 
-    console.log(id)
+router.put('/api/burgers/:id', (req, res) => {
+    let id = req.params.id 
+    console.log('id: ' + id)
 
-    // burger.updateOne(id).then((data) => {
-    //     if (data.changedRows == 0) {
-    //         return res.status(404).end();
-    //     } else {
-    //         res.status(200).end();
-    //     }
-    // })
+    burger.updateOne(id)
+    burger.selectAll().then(data => console.table(data))
 })
 
 module.exports = router
