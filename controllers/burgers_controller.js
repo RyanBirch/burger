@@ -4,9 +4,10 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
 
+    // select all data from database
     burger.selectAll()
         .then( data => {
-            console.table(data)
+
             let burgerObj = {
                 burger: data
             }
@@ -20,15 +21,13 @@ router.post('/api/burgers', (req, res) => {
 
     // add to database
     burger.insertOne(newBurger)
-    burger.selectAll().then(data => console.table(data))
 })
 
 router.put('/api/burgers/:id', (req, res) => {
     let id = req.params.id 
-    console.log('id: ' + id)
 
+    // update database
     burger.updateOne(id)
-    burger.selectAll().then(data => console.table(data))
 })
 
 module.exports = router

@@ -1,5 +1,6 @@
 const orm = require('./../config/orm.js')
 
+// mysql methods for burgers table
 const burger = {
 
     selectAll: function() {

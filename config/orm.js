@@ -3,6 +3,7 @@ const connection = require('./connection.js')
 // mysql methods
 const orm = {
 
+    // grab all data
     selectAll: function(table) {
 
         return new Promise((resolve, reject) => {
@@ -16,6 +17,7 @@ const orm = {
         })
     },
 
+    // add entry 
     insertOne: function(table, vals) {
 
         return new Promise((resolve, reject) => {
@@ -29,6 +31,7 @@ const orm = {
         })
     },
 
+    // update entry
     updateOne: function(table, id) {
 
          return new Promise((resolve, reject) => {
