@@ -35,4 +35,4 @@ This is a burger logging app for a restaurant made with Node.js, Express, MySQL,
 ---
 
 ## Demo
-See the app here: <a href="!#">Burger Logger</a>
+See the app here: <a href="https://vast-atoll-89154.herokuapp.com">Burger Logger</a>
